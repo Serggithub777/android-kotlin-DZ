@@ -1,4 +1,5 @@
 <resources>
-
     <string name="app_name">JavaToKotlin</string>
+    <string name="tv_title">Very important note</string>
+    <string name="tv_text">My very important note text with very important information</string>
 </resources>
