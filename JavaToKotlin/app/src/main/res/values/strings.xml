@@ -4,4 +4,5 @@
     <string name="tv_text">My very important note text with very important information</string>
     <string name="text_input_title">Заголовок</string>
     <string name="et_body">Текст заметки</string>
+    <string name="new_note_title">Новая заметка</string>
 </resources>
