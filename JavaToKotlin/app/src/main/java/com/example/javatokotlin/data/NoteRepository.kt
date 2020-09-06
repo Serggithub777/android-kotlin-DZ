@@ -28,7 +28,11 @@ object NoteRepository {
             Note(UUID.randomUUID().toString(),
                  "Первая заметка",
                  "Текст первой заметки. Не очень длинный, но интересный",
-                 Note.Color.VIOLET)
+                 Note.Color.VIOLET),
+            Note(UUID.randomUUID().toString(),
+                 "Первая заметка",
+                 "Текст первой заметки. Не очень длинный, но интересный",
+                 Note.Color.YELLOW)
             )
     init {
         notesLiveData.value = notes
