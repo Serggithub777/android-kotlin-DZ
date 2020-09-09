@@ -7,11 +7,11 @@ import com.example.javatokotlin.data.entity.Note
 import com.example.javatokotlin.data.model.NoteResult
 import com.google.firebase.firestore.FirebaseFirestore
 
-class FirestoreProvider : RemoteDataProvider {
+class FirestoreDataProvider : RemoteDataProvider {
     companion object {
         private const val NOTES_COLLECTION = "notes"
     }
-    private val TAG = "${FirestoreProvider::class.java.simpleName} :"
+    private val TAG = "${FirestoreDataProvider::class.java.simpleName} :"
     private val store = FirebaseFirestore.getInstance()
     private val notesReference = store.collection(NOTES_COLLECTION)
 
