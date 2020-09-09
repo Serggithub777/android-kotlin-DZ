@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.javatokotlin.R
-import com.example.javatokotlin.data.model.Note
+import com.example.javatokotlin.data.entity.Note
 import kotlinx.android.synthetic.main.item_note.view.*
 
 

@@ -2,7 +2,7 @@ package com.example.javatokotlin.data
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.javatokotlin.data.model.Note
+import com.example.javatokotlin.data.entity.Note
 import java.util.*
 
 object NoteRepository {
@@ -41,7 +41,7 @@ object NoteRepository {
     fun   getNotes(): LiveData<List<Note>> {
            return notesLiveData
    }
-    fun saveNote(note:Note){
+    fun saveNote(note: Note){
         addOrReplace(note)
         notesLiveData.value = notes
     }

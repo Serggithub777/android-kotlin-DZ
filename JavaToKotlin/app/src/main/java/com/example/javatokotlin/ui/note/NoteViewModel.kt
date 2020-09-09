@@ -2,7 +2,7 @@ package com.example.javatokotlin.ui.note
 
 import androidx.lifecycle.ViewModel
 import com.example.javatokotlin.data.NoteRepository
-import com.example.javatokotlin.data.model.Note
+import com.example.javatokotlin.data.entity.Note
 
 class NoteViewModel: ViewModel() {
     private var pendingNote: Note? = null

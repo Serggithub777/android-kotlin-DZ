@@ -1,4 +1,4 @@
-package com.example.javatokotlin.data.model
+package com.example.javatokotlin.data.entity
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
