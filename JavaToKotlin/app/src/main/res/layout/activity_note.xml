@@ -35,6 +35,8 @@
                 android:id="@+id/et_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/in_dp"
+                android:layout_marginEnd="@dimen/in_dp"
                 android:textColor="@android:color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -43,6 +45,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:layout_marginStart="@dimen/in_dp"
+            android:layout_marginEnd="@dimen/in_dp"
             android:background="@null"
             android:hint="@string/et_body"
             android:importantForAutofill="no"
