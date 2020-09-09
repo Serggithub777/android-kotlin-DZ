@@ -32,7 +32,14 @@ class FirestoreProvider : RemoteDataProvider {
     }
 
     override fun getNoteById(id: String): LiveData<NoteResult> {
-        TODO("Not yet implemented")
+        val result = MutableLiveData<NoteResult>()
+        notesReference.document(id).get()
+                .addOnSuccessListener { snapshot ->
+                    result.value = NoteResult.Success(snapshot.toObject(Note::class.java))
+                }.addOnFailureListener {
+                    result.value = NoteResult.Error(it)
+                }
+        return result
     }
 
     override fun saveNote(note: Note): LiveData<NoteResult> {
