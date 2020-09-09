@@ -1,5 +1,6 @@
 package com.example.javatokotlin.data.provider
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.javatokotlin.data.entity.Note
@@ -43,6 +44,15 @@ class FirestoreProvider : RemoteDataProvider {
     }
 
     override fun saveNote(note: Note): LiveData<NoteResult> {
-        TODO("Not yet implemented")
+        val result = MutableLiveData<NoteResult>()
+        notesReference.document(note.id).set(note)
+                .addOnSuccessListener { snapshot ->
+                    result.value = NoteResult.Success(note)
+                    Log.d(TAG, "Note $note is saved")
+                }.addOnFailureListener {
+                    result.value = NoteResult.Error(it)
+                    Log.d(TAG, "Error saving note $note")
+                }
+        return result
     }
 }
