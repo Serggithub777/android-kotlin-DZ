@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.example.javatokotlin.R
 import com.example.javatokotlin.data.errors.NoAuthException
+import com.firebase.ui.auth.AuthUI
 import kotlinx.android.synthetic.main.activity_main.*
 
 abstract class BaseActivity<T, S : BaseViewState<T>> : AppCompatActivity() {
@@ -64,6 +65,7 @@ abstract class BaseActivity<T, S : BaseViewState<T>> : AppCompatActivity() {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == RC_SIGN_IN && resultCode != Activity.RESULT_OK){
             finish()
         }
