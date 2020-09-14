@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">JavaToKotlin</string>
-    <string name="button_say_hello_kotlin">say hello kotlin</string>
+    <string name="tv_title">Very important note</string>
+    <string name="tv_text">My very important note text with very important information</string>
+    <string name="text_input_title">Заголовок</string>
+    <string name="et_body">Текст заметки</string>
+    <string name="new_note_title">Новая заметка</string>
+    <string name="logout_menu_title">Выход</string>
+    <string name="logout_title">Выход</string>
+    <string name="logout_message">Вы уверены?</string>
+    <string name="logout_ok">Да</string>
+    <string name="logout_cancel">Нет</string>
 </resources>
