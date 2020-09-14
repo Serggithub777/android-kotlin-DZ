@@ -4,10 +4,12 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.javatokotlin.data.entity.Note
+import com.example.javatokotlin.data.entity.User
+import com.example.javatokotlin.data.errors.NoAuthException
 import com.example.javatokotlin.data.model.NoteResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.auth.User
+
 
 class FirestoreDataProvider : RemoteDataProvider {
 
