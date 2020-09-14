@@ -1,6 +1,9 @@
 package com.example.javatokotlin.ui.splash
 
+import androidx.lifecycle.ViewModelProviders
 import com.example.javatokotlin.ui.base.BaseActivity
+import com.example.javatokotlin.ui.main.MainActivity
+import com.example.javatokotlin.ui.note.NoteActivity.Companion.start
 
 class SplashActivity : BaseActivity<Boolean?, SplashViewState>() {
 
