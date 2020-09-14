@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import com.example.javatokotlin.R
 import com.example.javatokotlin.data.errors.NoAuthException
 import kotlinx.android.synthetic.main.activity_main.*
 
