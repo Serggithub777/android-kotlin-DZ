@@ -10,4 +10,6 @@
     <string name="logout_message">Вы уверены?</string>
     <string name="logout_ok">Да</string>
     <string name="logout_cancel">Нет</string>
+    <string name="note_color_select">Выбрать цвет</string>
+    <string name="note_delete">Удалить</string>
 </resources>
