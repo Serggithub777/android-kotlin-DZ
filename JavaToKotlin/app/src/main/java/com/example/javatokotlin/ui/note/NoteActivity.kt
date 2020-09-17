@@ -17,6 +17,7 @@ import com.example.javatokotlin.extensions.getColorInt
 import com.example.javatokotlin.ui.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.toolbar
 import kotlinx.android.synthetic.main.activity_note.*
+import org.koin.android.viewmodel.ext.android.viewModel
 import java.text.SimpleDateFormat
 import java.util.*
 
