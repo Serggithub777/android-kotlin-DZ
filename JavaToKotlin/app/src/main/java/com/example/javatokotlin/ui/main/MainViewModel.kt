@@ -1,15 +1,12 @@
 package com.example.javatokotlin.ui.main
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
-import com.example.javatokotlin.data.NoteRepository
+import com.example.javatokotlin.data.NotesRepository
 import com.example.javatokotlin.data.entity.Note
 import com.example.javatokotlin.data.model.NoteResult
 import com.example.javatokotlin.ui.base.BaseViewModel
 
-class MainViewModel : BaseViewModel<List<Note>?, MainViewState>() {
+class MainViewModel(notesRepository: NotesRepository) : BaseViewModel<List<Note>?, MainViewState>() {
 
     private val notesObserver = Observer<NoteResult> { result ->
         result ?: return@Observer
@@ -23,7 +20,7 @@ class MainViewModel : BaseViewModel<List<Note>?, MainViewState>() {
         }
     }
 
-    private val repositoryNotes = NoteRepository.getNotes()
+    private val repositoryNotes = notesRepository.getNotes()
 
     init {
         viewStateLiveData.value = MainViewState()

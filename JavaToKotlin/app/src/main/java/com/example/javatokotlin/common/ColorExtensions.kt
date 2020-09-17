@@ -1,4 +1,4 @@
-package com.example.javatokotlin.extensions
+package com.example.javatokotlin.common
 
 import android.content.Context
 import androidx.core.content.ContextCompat

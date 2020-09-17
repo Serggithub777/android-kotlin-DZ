@@ -11,4 +11,5 @@ interface DataProvider {
     fun saveNote(note: Note): LiveData<NoteResult>
     fun deleteNote(noteId: String): LiveData<NoteResult>
     fun getCurrentUser(): LiveData<User?>
+
 }

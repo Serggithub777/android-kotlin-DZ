@@ -3,11 +3,10 @@ package com.example.javatokotlin.ui.main
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.javatokotlin.R
 import com.example.javatokotlin.data.entity.Note
-import com.example.javatokotlin.extensions.getColorInt
+import com.example.javatokotlin.common.getColorInt
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.item_note.view.*
 

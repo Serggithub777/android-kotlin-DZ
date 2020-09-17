@@ -6,18 +6,15 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
-import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import com.firebase.ui.auth.AuthUI
-import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.javatokotlin.R
 import com.example.javatokotlin.data.entity.Note
 import com.example.javatokotlin.ui.base.BaseActivity
-import com.example.javatokotlin.ui.base.BaseViewModel
 import com.example.javatokotlin.ui.note.NoteActivity
 import com.example.javatokotlin.ui.splash.SplashActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class MainActivity : BaseActivity<List<Note>?, MainViewState>() {
 
@@ -28,16 +25,13 @@ class MainActivity : BaseActivity<List<Note>?, MainViewState>() {
         }
     }
 
-    override val viewModel: BaseViewModel<List<Note>?, MainViewState> by lazy {
-        ViewModelProviders.of(this).get(MainViewModel::class.java)
-    }
+    override val model: MainViewModel by viewModel()
 
     override val layoutRes = R.layout.activity_main
 
     lateinit var adapter: NotesRVAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         setSupportActionBar(toolbar)
         rv_notes.layoutManager = GridLayoutManager(this, 2)
@@ -77,6 +71,5 @@ class MainActivity : BaseActivity<List<Note>?, MainViewState>() {
                     finish()
                 }
     }
-
 }
 

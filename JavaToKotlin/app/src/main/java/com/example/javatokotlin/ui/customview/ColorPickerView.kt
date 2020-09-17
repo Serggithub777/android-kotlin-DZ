@@ -8,8 +8,9 @@ import android.view.Gravity
 import android.widget.LinearLayout
 import androidx.annotation.Dimension
 import androidx.annotation.Dimension.DP
+import com.example.javatokotlin.common.dip
 import com.example.javatokotlin.data.entity.Note
-import com.example.javatokotlin.extensions.getColorRes
+import com.example.javatokotlin.common.getColorRes
 
 class ColorPickerView : LinearLayout {
 

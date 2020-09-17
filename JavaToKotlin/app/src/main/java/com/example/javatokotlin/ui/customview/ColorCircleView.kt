@@ -11,6 +11,7 @@ import androidx.annotation.Dimension.DP
 import androidx.annotation.Dimension.PX
 import androidx.core.content.ContextCompat
 import com.example.javatokotlin.R
+import com.example.javatokotlin.common.dip
 
 class ColorCircleView @JvmOverloads constructor(context: Context,
                                                 attrs: AttributeSet? = null,

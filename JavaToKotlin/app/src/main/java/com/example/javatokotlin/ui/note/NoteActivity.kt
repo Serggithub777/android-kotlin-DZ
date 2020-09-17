@@ -10,7 +10,7 @@ import android.view.Menu
 import android.view.MenuItem
 import com.example.javatokotlin.R
 import com.example.javatokotlin.data.entity.Note
-import com.example.javatokotlin.extensions.getColorInt
+import com.example.javatokotlin.common.getColorInt
 import com.example.javatokotlin.ui.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.toolbar
 import kotlinx.android.synthetic.main.activity_note.*
@@ -84,7 +84,7 @@ class NoteActivity : BaseActivity<NoteViewState.Data, NoteViewState>() {
         et_title.addTextChangedListener(textChangeListener)
         et_body.addTextChangedListener(textChangeListener)
 
-        colorPicker.onColorClick = {
+        colorPicker.onColorClickListener = {
             color = it
             toolbar.setBackgroundColor(color.getColorInt(this))
             saveNote()

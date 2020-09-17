@@ -17,7 +17,7 @@ abstract class BaseActivity<T, S : BaseViewState<T>> : AppCompatActivity() {
         const val RC_SIGN_IN = 4242
     }
 
-    abstract val viewModel: BaseViewModel<T, S>
+    abstract val model: BaseViewModel<T, S>
     abstract val layoutRes: Int?
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +27,7 @@ abstract class BaseActivity<T, S : BaseViewState<T>> : AppCompatActivity() {
         }
 
         setSupportActionBar(toolbar)
-        viewModel.getViewState().observe(this, Observer { state ->
+        model.getViewState().observe(this, Observer { state ->
             state ?: return@Observer
             state.error?.let { e ->
                 renderError(e)
@@ -65,7 +65,6 @@ abstract class BaseActivity<T, S : BaseViewState<T>> : AppCompatActivity() {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == RC_SIGN_IN && resultCode != Activity.RESULT_OK){
             finish()
         }
