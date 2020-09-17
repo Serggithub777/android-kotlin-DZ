@@ -87,7 +87,7 @@ class NoteActivity : BaseActivity<NoteViewState.Data, NoteViewState>() {
         et_title.addTextChangedListener(textChangeListener)
         et_body.addTextChangedListener(textChangeListener)
 
-        colorPicker.onColorClickListener = {
+        colorPicker.onColorClick = {
             color = it
             toolbar.setBackgroundColor(color.getColorInt(this))
             saveNote()

@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.example.javatokotlin.ui.customview.ColorCircleView
+            <com.example.javatokotlin.ui.customview.ColorPickerView
                 android:id="@+id/colorPicker"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize" />

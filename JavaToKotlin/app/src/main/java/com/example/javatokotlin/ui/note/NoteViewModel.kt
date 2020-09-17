@@ -1,7 +1,8 @@
 package com.example.javatokotlin.ui.note
 
-import androidx.lifecycle.ViewModel
-import com.example.javatokotlin.data.NoteRepository
+
+
+import com.example.javatokotlin.data.NotesRepository
 import com.example.javatokotlin.data.entity.Note
 import com.example.javatokotlin.data.model.NoteResult
 import com.example.javatokotlin.ui.base.BaseViewModel
