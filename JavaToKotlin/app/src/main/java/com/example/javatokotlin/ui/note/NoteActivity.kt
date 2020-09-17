@@ -8,9 +8,6 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.Menu
 import android.view.MenuItem
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import androidx.lifecycle.ViewModelProviders
 import com.example.javatokotlin.R
 import com.example.javatokotlin.data.entity.Note
 import com.example.javatokotlin.extensions.getColorInt

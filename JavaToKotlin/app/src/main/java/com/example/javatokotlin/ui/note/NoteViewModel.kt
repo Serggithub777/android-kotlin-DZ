@@ -1,7 +1,5 @@
 package com.example.javatokotlin.ui.note
 
-
-
 import com.example.javatokotlin.data.NotesRepository
 import com.example.javatokotlin.data.entity.Note
 import com.example.javatokotlin.data.model.NoteResult
