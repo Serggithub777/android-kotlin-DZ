@@ -1,6 +1,5 @@
 package com.example.javatokotlin.data.provider
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.javatokotlin.data.entity.Note
